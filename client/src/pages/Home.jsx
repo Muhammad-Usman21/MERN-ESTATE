@@ -10,7 +10,7 @@ const Home = () => {
 	const [offerListings, setOfferListings] = useState([]);
 	const [rentListings, setRentListings] = useState([]);
 	const [saleListings, setSaleListings] = useState([]);
-	SwiperCore.use({ Navigation });
+	SwiperCore.use([Navigation]);
 
 	// console.log(offerListings);
 
@@ -69,11 +69,13 @@ const Home = () => {
 					<br />
 					We have a wide range of properties for you to choose from.
 				</p>
-				<Link
-					to={"/search"}
-					className="text-xs sm:text-sm text-blue-800 font-bold hover:underline">
-					Lets get started...
-				</Link>
+				<p>
+					<Link
+						to={"/search"}
+						className="text-xs sm:text-sm text-blue-800 font-bold hover:underline">
+						Lets get started...
+					</Link>
+				</p>
 			</div>
 
 			<Swiper navigation>

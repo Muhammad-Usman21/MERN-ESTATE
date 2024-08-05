@@ -17,10 +17,12 @@ const Header = () => {
 	};
 
 	useEffect(() => {
-		const urlParams = new URLSearchParams(window.location.search);
+		const urlParams = new URLSearchParams(location.search);
 		const searchTermFormUrl = urlParams.get("searchTerm");
 		if (searchTermFormUrl) {
 			setSearchTerm(searchTermFormUrl);
+		} else {
+			setSearchTerm("");
 		}
 	}, [location.search]);
 
