@@ -27,10 +27,10 @@ const Header = () => {
 	}, [location.search]);
 
 	return (
-		<header className="bg-slate-200 shadow-md">
+		<header className="bg-slate-200 shadow-md fixed w-full h-[72px] z-10">
 			<div className="flex justify-between items-center max-w-6xl mx-auto p-3">
 				<Link to="/">
-					<h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
+					<h1 className="font-bold text-xl sm:text-xl flex flex-wrap">
 						<span className="text-slate-500">Real</span>
 						<span className="text-slate-700">Estate</span>
 					</h1>
@@ -41,7 +41,7 @@ const Header = () => {
 					<input
 						type="text"
 						placeholder="Search..."
-						className="bg-transparent focus:outline-none w-24 sm:w-64"
+						className="bg-transparent focus:outline-none w-32 sm:w-44 md:w-64 lg:w-96"
 						value={searchTerm}
 						onChange={(e) => setSearchTerm(e.target.value)}
 					/>
@@ -55,7 +55,7 @@ const Header = () => {
 							Home
 						</li>
 					</Link>
-					<Link to="about">
+					<Link to="/about">
 						<li className="hidden sm:inline text-slate-700 hover:underline">
 							About
 						</li>
