@@ -180,7 +180,7 @@ const CreateListing = () => {
 
 	return (
 		<main className="p-3 max-w-4xl mx-auto">
-			<h1 className="text-3xl font-semibold text-center my-7">
+			<h1 className="text-3xl font-semibold text-center mb-7 mt-24">
 				Update a Listing
 			</h1>
 			<form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-6">

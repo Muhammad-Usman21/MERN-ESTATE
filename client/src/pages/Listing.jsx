@@ -55,9 +55,11 @@ const Listing = () => {
 
 	return (
 		<main>
-			{loading && <p className="text-center my-7 text-2xl">Loading...</p>}
+			{loading && (
+				<p className="text-center my-7 text-2xl mt-[100px]">Loading...</p>
+			)}
 			{error && (
-				<p className="text-center my-7 text-2xl text-red-700">
+				<p className="text-center my-7 text-2xl text-red-700 mt-[100px]">
 					Something went wrong!
 				</p>
 			)}
@@ -67,7 +69,7 @@ const Listing = () => {
 						{listing.imageUrls.map((url) => (
 							<SwiperSlide key={url}>
 								<div
-									className="h-[500px]"
+									className="h-[500px] mt-[72px]"
 									style={{
 										background: `url(${url}) center no-repeat`,
 										backgroundSize: "cover",
